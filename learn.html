@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Learn Dirac Notation</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- MathJax -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+    <script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+
+</head>
+
+<body>
+
+    <h1>Learn Dirac Notation</h1>
+
+    <p>
+        Click on a topic below to explore concepts in Dirac notation.
+    </p>
+
+    <div class="accordion-container">
+
+        <!-- Ket -->
+
+        <button class="accordion">
+            <span class="arrow">➤</span>
+            What is a Ket?
+        </button>
+
+        <div class="panel">
+
+            <p>
+                A <b>ket</b> represents a quantum state.
+            </p>
+
+            <p>
+                <b>Example:</b> \( |\psi\rangle \)
+            </p>
+
+            <p>
+                A general quantum state:
+                \( |\psi\rangle = a|0\rangle + b|1\rangle \)
+            </p>
+
+        </div>
+
+        <!-- Bra -->
+
+        <button class="accordion">
+            <span class="arrow">➤</span>
+            What is a Bra?
+        </button>
+
+        <div class="panel">
+
+            <p>
+                A <b>bra</b> is the conjugate transpose of a ket.
+            </p>
+
+            <p>
+                <b>Example:</b> \( \langle \psi| \)
+            </p>
+
+        </div>
+
+        <!-- Basis States -->
+
+        <button class="accordion">
+            <span class="arrow">➤</span>
+            Basis States
+        </button>
+
+        <div class="panel">
+
+            <p>
+                Basis states are the simplest quantum states.
+            </p>
+
+            <p>
+                \( |0\rangle =
+                \begin{bmatrix}1 \\ 0\end{bmatrix} \)
+            </p>
+
+            <p>
+                \( |1\rangle =
+                \begin{bmatrix}0 \\ 1\end{bmatrix} \)
+            </p>
+
+        </div>
+
+        <!-- Inner Product -->
+
+        <button class="accordion">
+            <span class="arrow">➤</span>
+            Inner Product
+        </button>
+
+        <div class="panel">
+
+            <p>
+                The <b>inner product</b> combines a bra and a ket.
+            </p>
+
+            <p>
+                Example:
+                \( \langle \phi | \psi \rangle \)
+            </p>
+
+            <p>
+                It produces a scalar value.
+            </p>
+
+        </div>
+
+        <!-- Normalization -->
+
+        <button class="accordion">
+            <span class="arrow">➤</span>
+            Normalization
+        </button>
+
+        <div class="panel">
+
+            <p>
+                Quantum states must be normalized.
+            </p>
+
+            <p>
+                Condition:
+                \( |a|^2 + |b|^2 = 1 \)
+            </p>
+
+            <p>
+                This ensures total probability equals 1.
+            </p>
+
+        </div>
+
+        <!-- Operators -->
+
+        <button class="accordion">
+            <span class="arrow">➤</span>
+            Operators
+        </button>
+
+        <div class="panel">
+
+            <p>
+                Operators act on quantum states.
+            </p>
+
+            <p>
+                Example:
+                \( \hat{A}|\psi\rangle \)
+            </p>
+
+            <p>
+                Operators are represented using matrices.
+            </p>
+
+        </div>
+
+        <!-- Outer Product -->
+
+        <button class="accordion">
+            <span class="arrow">➤</span>
+            Outer Product
+        </button>
+
+        <div class="panel">
+
+            <p>
+                The <b>outer product</b> combines a ket and a bra.
+            </p>
+
+            <p>
+                Example:
+                \( |\psi\rangle \langle \phi| \)
+            </p>
+
+            <p>
+                It produces an operator (matrix).
+            </p>
+
+        </div>
+
+        <!-- Tensor Product -->
+
+        <button class="accordion">
+            <span class="arrow">➤</span>
+            Tensor Product
+        </button>
+
+        <div class="panel">
+
+            <p>
+                The <b>tensor product</b> combines two quantum states 
+                into a larger system.
+            </p>
+
+            <p>
+                Example:
+                \( |0\rangle \otimes |1\rangle = |01\rangle \)
+            </p>
+
+            <p>
+                Tensor products are used to describe multi-qubit systems.
+            </p>
+
+        </div>
+                    <!-- Quantum Gates -->
+
+            <button class="accordion">
+                <span class="arrow">➤</span>
+                Quantum Gates
+            </button>
+
+            <div class="panel">
+
+                <p>
+                    Quantum gates are operators that act on quantum states.
+                </p>
+
+                <p>
+                    They are represented using matrices.
+                </p>
+
+                <p>
+                    <b>Pauli-X Gate (NOT Gate):</b>
+                    Swaps \( |0\rangle \) and \( |1\rangle \)
+                </p>
+
+                <p>
+                    \( \begin{bmatrix}
+                    0 & 1 \\
+                    1 & 0
+                    \end{bmatrix} \)
+                </p>
+
+                <p>
+                    <b>Pauli-Z Gate:</b>
+                    Flips the sign of \( |1\rangle \)
+                </p>
+
+                <p>
+                    \( \begin{bmatrix}
+                    1 & 0 \\
+                    0 & -1
+                    \end{bmatrix} \)
+                </p>
+
+                <p>
+                    <b>Hadamard Gate:</b>
+                    Creates superposition states.
+                </p>
+
+                <p>
+                    \( \frac{1}{\sqrt{2}}
+                    \begin{bmatrix}
+                    1 & 1 \\
+                    1 & -1
+                    \end{bmatrix} \)
+                </p>
+
+            </div>
+
+                        <!-- Measurement -->
+
+            <button class="accordion">
+                <span class="arrow">➤</span>
+                Measurement in Quantum Mechanics
+            </button>
+
+            <div class="panel">
+
+                <p>
+                    Measurement determines the outcome of a quantum state.
+                </p>
+
+                <p>
+                    If a state is:
+                    \( |\psi\rangle = a|0\rangle + b|1\rangle \)
+                </p>
+
+                <p>
+                    The probability of measuring \( |0\rangle \) is:
+                    \( P(0) = |a|^2 \)
+                </p>
+
+                <p>
+                    The probability of measuring \( |1\rangle \) is:
+                    \( P(1) = |b|^2 \)
+                </p>
+
+                <p>
+                    The total probability must always equal 1.
+                </p>
+
+            </div>
+
+    </div>
+
+    <br>
+
+    <button onclick="window.location.href='index.html'">
+        ⬅ Back to Home
+    </button>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

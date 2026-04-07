@@ -1,0 +1,446 @@
+/* Dark Mode Background */
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    /* Dark gradient background */
+    background: linear-gradient(
+        135deg,
+        #0f2027,
+        #203a43,
+        #2c5364
+    );
+
+    color: white;
+
+    text-align: center;
+
+    min-height: 100vh;  /* allows scrolling */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+/* Title Styling */
+
+h1 {
+    font-size: 52px;   /* Bigger title */
+    font-weight: bold;
+
+    margin-bottom: 20px;
+
+    /* Glow effect */
+    text-shadow:
+        0 0 10px rgba(0,150,255,0.8),
+        0 0 20px rgba(0,150,255,0.6);
+
+    /* Fade-in animation */
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+
+/* Paragraph Styling */
+
+p {
+    font-size: 18px;
+
+    max-width: 600px;
+
+    opacity: 0.85;
+
+    margin-bottom: 40px;
+
+    animation: fadeIn 2s ease-in-out;
+}
+
+
+/* Button Container */
+
+.button-container {
+
+    display: flex;
+
+    gap: 35px;  /* Space between buttons */
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    margin-top: 20px;
+
+}
+
+
+/* Modern Button */
+
+button {
+    padding: 16px 32px;
+
+    font-size: 18px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    background: linear-gradient(
+        45deg,
+        #00c6ff,
+        #0072ff
+    );
+
+    color: white;
+
+    font-weight: bold;
+
+    transition: all 0.3s ease;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.4);
+
+    animation: fadeIn 2.5s ease-in-out;
+}
+
+
+/* Hover Effect */
+
+button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 25px rgba(0,0,0,0.6);
+
+    background: linear-gradient(
+        45deg,
+        #00eaff,
+        #005eff
+    );
+}
+
+
+/* Click Effect */
+
+button:active {
+    transform: scale(0.95);
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,0.5);
+}
+
+
+/* Fade Animation */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* Learn Button — Softer Educational Color */
+
+#learnBtn {
+
+    background: linear-gradient(
+        45deg,
+        #6a82fb,
+        #a18cd1
+    );
+
+}
+
+
+/* Learn Button Hover */
+
+#learnBtn:hover {
+
+    background: linear-gradient(
+        45deg,
+        #7f9cff,
+        #b39ddb
+    );
+
+}
+
+
+/* Launch Button — Brighter Action Color */
+
+#launchBtn {
+
+    background: linear-gradient(
+        45deg,
+        #00c6ff,
+        #0072ff
+    );
+
+}
+
+
+/* Launch Button Hover */
+
+#launchBtn:hover {
+
+    background: linear-gradient(
+        45deg,
+        #00eaff,
+        #005eff
+    );
+
+}
+
+/* Accordion Container */
+
+.accordion-container {
+
+    width: 80%;
+    max-width: 700px;
+
+}
+
+
+/* Accordion Button */
+
+.accordion {
+
+    background: rgba(255,255,255,0.1);
+
+    color: white;
+
+    cursor: pointer;
+
+    padding: 16px;
+
+    width: 100%;
+
+    text-align: left;
+
+    font-size: 18px;
+
+    border-radius: 10px;
+
+    margin-top: 12px;
+
+    transition: 0.3s;
+
+}
+
+
+/* Hover */
+
+.accordion:hover {
+
+    background: rgba(255,255,255,0.2);
+
+}
+
+
+/* Panel */
+
+.panel {
+
+    padding: 0 16px;
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    transition: max-height 0.4s ease;
+
+    background: rgba(255,255,255,0.05);
+
+    border-radius: 10px;
+
+}
+
+/* Arrow Styling */
+
+.arrow {
+
+    display: inline-block;
+
+    margin-right: 10px;
+
+    transition: transform 0.3s ease;
+
+}
+
+
+/* Rotate Arrow When Active */
+
+.accordion.active .arrow {
+
+    transform: rotate(90deg);
+
+}
+
+/* Homepage Centering Only */
+
+.home-page {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    height: 100vh;
+
+    text-align: center;
+
+}
+/* Simulator Layout */
+
+.simulator-container {
+
+    display: flex;
+
+    gap: 30px;
+
+    margin-top: 30px;
+
+    width: 90%;
+
+    max-width: 1000px;
+
+}
+
+
+/* Panels */
+
+.left-panel,
+.right-panel {
+
+    flex: 1;
+
+    background: rgba(255,255,255,0.08);
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    backdrop-filter: blur(8px);
+
+}
+
+
+/* Inputs */
+
+input {
+
+    display: block;
+
+    width: 90%;
+
+    margin: 10px auto;
+
+    padding: 10px;
+
+    border-radius: 8px;
+
+    border: none;
+
+}
+
+
+/* Dropdown */
+
+select {
+
+    padding: 10px;
+
+    border-radius: 8px;
+
+    margin-top: 10px;
+
+}
+
+
+/* Measure Button */
+
+.left-panel button {
+
+    margin-top: 15px;
+
+}
+
+/* Probability Bars */
+
+.bar-container {
+
+    width: 100%;
+
+    background: rgba(255,255,255,0.15);
+
+    border-radius: 10px;
+
+    margin-bottom: 15px;
+
+    height: 25px;
+
+}
+
+
+.bar {
+
+    height: 100%;
+
+    width: 0%;
+
+    background: linear-gradient(
+        45deg,
+        #00eaff,
+        #0072ff
+    );
+
+    border-radius: 10px;
+
+    transition: width 0.5s ease;
+
+}
+
+/* Probability Bars */
+
+.bar-container {
+
+    width: 100%;
+
+    background: rgba(255,255,255,0.15);
+
+    border-radius: 10px;
+
+    margin-bottom: 15px;
+
+    height: 25px;
+
+}
+
+
+.bar {
+
+    height: 100%;
+
+    width: 0%;
+
+    background: linear-gradient(
+        45deg,
+        #00eaff,
+        #0072ff
+    );
+
+    border-radius: 10px;
+
+    transition: width 0.5s ease;
+
+}
