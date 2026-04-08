@@ -12,7 +12,6 @@ if (launchBtn) {
 
 }
 
-
 var learnBtn = document.getElementById("learnBtn");
 
 if (learnBtn) {
@@ -24,7 +23,6 @@ if (learnBtn) {
     };
 
 }
-
 
 
 /* ---------- Accordion Logic ---------- */
@@ -53,7 +51,6 @@ for (var i = 0; i < acc.length; i++) {
     });
 
 }
-
 
 
 /* ---------- Measurement + Operator Logic ---------- */
@@ -85,7 +82,6 @@ if (measureBtn) {
 
         var operator =
             document.getElementById("operatorSelect").value;
-
 
 
         /* Apply Operator */
@@ -123,7 +119,6 @@ if (measureBtn) {
         }
 
 
-
         /* Calculate Probabilities */
 
         var p0 = a * a;
@@ -152,25 +147,29 @@ if (measureBtn) {
             "normalizationMsg"
         ).innerText = message;
 
+
         /* Update Probability Bars */
 
-            var width0 = p0 * 100;
-            var width1 = p1 * 100;
+        var width0 = p0 * 100;
+        var width1 = p1 * 100;
 
-            document.getElementById("bar0").style.width =
-                width0 + "%";
+        document.getElementById("bar0").style.width =
+            width0 + "%";
 
-            document.getElementById("bar1").style.width =
-                width1 + "%";
+        document.getElementById("bar1").style.width =
+            width1 + "%";
 
-        
-                /* Update Labels */
 
-            document.getElementById("label0").innerText =
-                "P(0) = " + p0.toFixed(3);
+        /* Update Labels */
 
-            document.getElementById("label1").innerText =
-                "P(1) = " + p1.toFixed(3);
+        document.getElementById("label0").innerText =
+            "P(0) = " + p0.toFixed(3);
+
+        document.getElementById("label1").innerText =
+            "P(1) = " + p1.toFixed(3);
+
+
+        /* Update Output State */
 
         document.getElementById(
             "outputState"
@@ -181,18 +180,28 @@ if (measureBtn) {
             + b.toFixed(3) + "|1\\rangle\\)";
 
 
-
-        /* Refresh MathJax */
+        /* Refresh MathJax properly */
 
         if (window.MathJax) {
 
-            MathJax.typeset();
+            MathJax.typesetPromise();
+
+        }
+
+
+        /* Update Bloch AFTER calculations */
+
+        if (typeof updateBlochVector === "function") {
+
+            updateBlochVector(a, b);
 
         }
 
     });
 
 }
+
+
 
 /* ---------- Operator Matrix Display ---------- */
 
@@ -247,11 +256,11 @@ if (operatorSelect) {
             ).innerHTML = matrixText;
 
 
-            /* Refresh MathJax */
+            /* Force MathJax refresh */
 
             if (window.MathJax) {
 
-                MathJax.typeset();
+                MathJax.typesetPromise();
 
             }
 

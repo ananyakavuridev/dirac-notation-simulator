@@ -285,11 +285,11 @@ button:active {
 
 }
 
-/* Homepage Centering Only */
-
 .home-page {
 
     display: flex;
+
+    flex-direction: column;  /* ⭐ VERY IMPORTANT */
 
     justify-content: center;
 
@@ -302,7 +302,7 @@ button:active {
 }
 /* Simulator Layout */
 
-.simulator-container {
+.simulator-page {
 
     display: flex;
 
@@ -385,10 +385,10 @@ select {
 
     border-radius: 10px;
 
-    margin-bottom: 15px;
-
     height: 25px;
 
+    margin-top: 0px;   /* pulls bar upward */
+    margin-bottom: 6px;
 }
 
 
@@ -410,37 +410,28 @@ select {
 
 }
 
-/* Probability Bars */
+#bloch-container {
+    width: 300px;
+    height: 300px;
 
-.bar-container {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
 
-    width: 100%;
-
-    background: rgba(255,255,255,0.15);
-
-    border-radius: 10px;
-
-    margin-bottom: 15px;
-
-    height: 25px;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+#probabilities p {
+    margin-bottom: 2px;
+    margin-top: 8px;
+}
 
-.bar {
+.section-label {
+    margin-bottom: 2px;
+}
 
-    height: 100%;
-
-    width: 0%;
-
-    background: linear-gradient(
-        45deg,
-        #00eaff,
-        #0072ff
-    );
-
-    border-radius: 10px;
-
-    transition: width 0.5s ease;
-
+#outputState {
+    margin-top: 4px;
 }

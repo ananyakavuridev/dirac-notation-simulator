@@ -20,7 +20,7 @@
 
     <h1>Quantum Simulator</h1>
 
-    <div class="simulator-container">
+    <div class="simulator-page">
 
         <!-- LEFT PANEL -->
 
@@ -78,9 +78,6 @@
 
             </p>
 
-
-            <h2>Measurement</h2>
-
             <button id="measureBtn">
                 Measure State
             </button>
@@ -95,9 +92,9 @@
 
             <h2>Results</h2>
 
-            <p>
+            <h3 class="section-label">
                 Output State:
-            </p>
+            </h3>
 
             <p id="outputState">
                 \( |\psi\rangle = ? \)
@@ -109,9 +106,9 @@
             </p>
 
 
-            <p>
-                Probabilities:
-            </p>
+            <h3 class="section-label">
+                Probabilities
+            </h3>
 
             <div id="probabilities">
 
@@ -133,6 +130,9 @@
 
             </div>
 
+            <div id="bloch-container"></div>
+            
+
         </div> <!-- right-panel -->
 
     </div> <!-- simulator-container -->
@@ -144,7 +144,15 @@
         ⬅ Back to Home
     </button>
 
-    <script src="script.js"></script>
+<!-- Three.js FIRST -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+<!-- Then Bloch -->
+<script src="bloch.js"></script>
+
+<!-- Then your main logic -->
+<script src="script.js"></script>
+
 
 </body>
 
