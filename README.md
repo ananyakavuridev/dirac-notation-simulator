@@ -59,6 +59,3 @@ The simulator helps in understanding quantum states and quantum gates in an intu
 
 ## Project Link
 https://ananyakavuridev.github.io/dirac-notation-simulator/
-
-## Author
-K ANANYA
